@@ -1,0 +1,6 @@
+relationship AutoDetected_2409ff48-5cec-4d63-985c-1bd7214aa238
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Sales.SKU
+	toColumn: Product.SKU
+
