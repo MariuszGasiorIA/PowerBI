@@ -1,0 +1,35 @@
+table Engi
+	lineageTag: 9ea2b258-b3b6-48bb-8f01-15c771aa6090
+
+	column SKU
+		dataType: string
+		lineageTag: 3531bdb0-dbb2-43b1-9a6d-f29bbaeb1bb1
+		summarizeBy: none
+		sourceColumn: SKU
+
+		annotation SummarizationSetBy = Automatic
+
+	column Engi
+		dataType: string
+		lineageTag: b68274d3-a923-44cd-bb8c-1363178f57e7
+		summarizeBy: none
+		sourceColumn: Engi
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Engi = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\!BI Power\R2G\Source_B.xlsx"), null, true),
+				    Engi_Sheet = Source{[Item="Engi",Kind="Sheet"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(Engi_Sheet,{{"Column1", type text}, {"Column2", type text}}),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Changed Type", [PromoteAllScalars=true]),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"SKU", type text}, {"Engi", type text}})
+				in
+				    #"Changed Type1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
