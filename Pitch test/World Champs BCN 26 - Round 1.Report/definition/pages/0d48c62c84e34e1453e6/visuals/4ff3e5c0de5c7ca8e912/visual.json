@@ -1,0 +1,116 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "4ff3e5c0de5c7ca8e912",
+  "position": {
+    "x": 1295.7142857142858,
+    "y": 277.14285714285717,
+    "z": 38000,
+    "height": 60.000000000000007,
+    "width": 114.28571428571429,
+    "tabOrder": 37000
+  },
+  "visual": {
+    "visualType": "image",
+    "objects": {
+      "image": [
+        {
+          "properties": {
+            "sourceType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'imageData'"
+                }
+              }
+            },
+            "sourceField": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "!Measures"
+                    }
+                  },
+                  "Property": "SVG KPI NetRevenue %"
+                }
+              }
+            },
+            "fit": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Stretch'"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "sourceField": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "!Measures"
+                    }
+                  },
+                  "Property": "SVG KPI AOV Absolute"
+                }
+              }
+            },
+            "fit": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Fit'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "sourceField": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "!Measures"
+                    }
+                  },
+                  "Property": "SVG KPI NetRevenue %"
+                }
+              }
+            },
+            "fit": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Fit'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "hover"
+          }
+        },
+        {
+          "properties": {
+            "sourceField": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "press"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

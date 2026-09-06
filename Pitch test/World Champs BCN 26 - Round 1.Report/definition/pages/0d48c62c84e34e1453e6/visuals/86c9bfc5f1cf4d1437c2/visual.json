@@ -1,0 +1,107 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "86c9bfc5f1cf4d1437c2",
+  "position": {
+    "x": 62,
+    "y": 464,
+    "z": 35000,
+    "height": 33,
+    "width": 1047,
+    "tabOrder": 34000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Best Region is EMEA (64% share) with United Kingdom (40% share). "
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "r",
+                                "Entity": "Region",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "r"
+                                    }
+                                  },
+                                  "Property": "Country"
+                                },
+                                "Name": "Region.Country"
+                              }
+                            ],
+                            "OrderBy": [
+                              {
+                                "Direction": 1,
+                                "Expression": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "r"
+                                      }
+                                    },
+                                    "Property": "Country"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "Region.Country"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "Country",
+                      "utterance": "Country"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Country"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "isHidden": true
+}

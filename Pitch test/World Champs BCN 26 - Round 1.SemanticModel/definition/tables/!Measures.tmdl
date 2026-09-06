@@ -1,0 +1,950 @@
+table !Measures
+	lineageTag: 3dbe21d0-7730-449a-9005-c880dbc7a301
+
+	measure 'SUM DiscountAmount MGDAX' = ```
+			
+			    SUM(Sales[DiscountAmount])
+			```
+		lineageTag: b4dbc358-e4be-408b-8983-de322feda4f2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'SUM GrossRevenue MGDAX' = ```
+			
+			    SUM(Sales[GrossRevenue])
+			```
+		lineageTag: 024962f4-ed93-41b5-8c2f-74bea19d647b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'SUM NetRevenue MGDAX' = ```
+			
+			    SUM(Sales[NetRevenue])
+			```
+		formatString: #,0\ "€";-#,0\ "€";#,0\ "€"
+		lineageTag: 5217c727-079c-48f0-b4bb-800ae7a4d407
+
+	measure 'SUM Profit MGDAX' = ```
+			
+			    SUM(Sales[Profit])
+			```
+		formatString: #,0\ "€";-#,0\ "€";#,0\ "€"
+		lineageTag: 809ad96f-0c07-467a-b2ea-b51a9cd40dd1
+
+	measure 'SUM Quantity MGDAX' = ```
+			
+			    SUM(Sales[Quantity])
+			```
+		formatString: #,0
+		lineageTag: 4c592edd-51bc-4f91-a67c-b88f240d7a87
+
+	measure 'SUM Cost MGDAX' = ```
+			
+			    ROUND(
+			        SUMX(Sales,Sales[Quantity]*Sales[UnitCost]),
+			        2)
+			```
+		lineageTag: 1a02c3ac-8089-4c9d-a3fb-f2e65cec6430
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'SUM TEST' =
+			
+			[SUM Cost MGDAX] + [SUM Profit MGDAX]
+		lineageTag: 2cd89729-5102-4628-8679-6838e48fe3ef
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'SVG Bar Chart NetRevenue MGDAX' =
+			
+			VAR Years =
+			    VALUES ( 'Date'[Year] )
+			
+			VAR MaxValue =
+			    MAXX (
+			        Years,
+			        CALCULATE ( [SUM NetRevenue MGDAX] )
+			    )
+			
+			VAR BarWidth = 90
+			VAR Gap = 24
+			VAR BaseY = 300
+			
+			VAR CountYears =
+			    COUNTROWS ( Years )
+			
+			VAR ChartWidth =
+			    CountYears * BarWidth + ( CountYears - 1 ) * Gap
+			
+			VAR svg =
+			    "<svg xmlns='http://www.w3.org/2000/svg' width='"
+			    & ChartWidth &
+			    "' height='300' viewBox='0 0 "
+			    & ChartWidth &
+			    " 300'>"
+			    &
+			    CONCATENATEX (
+			        Years,
+			        VAR v =
+			            CALCULATE ( [SUM NetRevenue MGDAX] )
+			
+			        VAR idx =
+			            RANKX ( Years, 'Date'[Year], , ASC )
+			
+			        VAR h =
+			            DIVIDE ( v, MaxValue ) * 300
+			
+			        VAR x =
+			            ( idx - 1 ) * ( BarWidth + Gap )
+			
+			        VAR y =
+			            BaseY - h
+			
+			        VAR color =
+			            IF ( v = MaxValue, "#555555", "#B0B0B0" )
+			
+			        VAR rx =
+			            BarWidth / 2
+			
+			        RETURN
+			            "<rect x='"
+			            & x &
+			            "' y='"
+			            & y &
+			            "' width='"
+			            & BarWidth &
+			            "' height='"
+			            & h &
+			            "' rx='"
+			            & rx &
+			            "' fill='"
+			            & color &
+			            "' />",
+			        "",
+			        'Date'[Year],
+			        ASC
+			    )
+			    &
+			    "</svg>"
+			
+			RETURN
+			    "data:image/svg+xml;utf8," & svg
+		lineageTag: b44ed4d8-1b13-4097-adb2-f11041e57250
+		dataCategory: ImageUrl
+
+	measure 'SVG KPI NetRevenue %' =
+			
+			VAR _Value = [DIVIDE NR '24 vs'25]
+			
+			VAR _Color =
+			    IF(
+			        _Value >= 0,
+			        "#2E7D32",      -- zielony
+			        "#E91E63"       -- różowy
+			    )
+			
+			VAR _FillColor =
+			    IF(
+			        _Value >= 0,
+			        "#E8F5E9",      -- jasnozielone tło
+			        "#FCE4EC"       -- jasnoróżowe tło
+			    )
+			
+			VAR _Arrow =
+			    IF(
+			        _Value >= 0,
+			        "▲",
+			        "▼"
+			    )
+			
+			VAR _Text =
+			    FORMAT(_Value, "+0%;-0%;0%")
+			
+			VAR _SVG =
+			"
+			<svg xmlns='http://www.w3.org/2000/svg' width='180' height='50' viewBox='0 0 180 50'>
+			    <rect
+			        x='1'
+			        y='1'
+			        width='178'
+			        height='48'
+			        rx='12'
+			        ry='12'
+			        fill='" & _FillColor & "'
+			        stroke='" & _Color & "'
+			        stroke-width='2'/>
+			
+			    <text
+			        x='90'
+			        y='32'
+			        font-family='Segoe UI'
+			        font-size='20'
+			        font-weight='600'
+			        fill='" & _Color & "'
+			        text-anchor='middle'>
+			        " & _Arrow & " " & _Text & " YoY" &"
+			    </text>
+			</svg>
+			"
+			
+			RETURN
+			"data:image/svg+xml;utf8," & _SVG
+		lineageTag: 5a8b7b18-dd87-41cc-9b13-7e31f021c17d
+
+	measure 'Diff Net Revenue%' =
+			
+			0.5
+		lineageTag: c0483a8f-376b-40d3-a3ae-9028168d26e0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'SVG KPI NetRevenue Absolute' =
+			
+			VAR _Value = [DIFF NR '24 vs'25]
+			
+			VAR _Color =
+			    IF(_Value >= 0, "#2E7D32", "#E91E63")
+			
+			VAR _BgColor =
+			    IF(_Value >= 0, "#E8F5E9", "#FCE4EC")
+			
+			VAR _Arrow =
+			    IF(_Value >= 0, "▲", "▼")
+			
+			VAR _Num =
+			    INT(ABS(_Value))
+			
+			VAR _Text =
+			    FORMAT(_Num, "0")
+			
+			-- ręczne dodanie separatora tysięcy (spacja)
+			VAR _Len = LEN(_Text)
+			
+			VAR _Grouped =
+			    CONCATENATEX(
+			        GENERATESERIES(1, _Len),
+			        MID(_Text, _Len - [Value] + 1, 1),
+			        "",
+			        [Value],
+			        DESC
+			    )
+			
+			VAR _Chunks =
+			    CONCATENATEX(
+			        GENERATESERIES(1, _Len),
+			        MID(_Text, _Len - [Value] + 1, 1),
+			        "",
+			        [Value],
+			        DESC
+			    )
+			
+			-- właściwe grupowanie
+			VAR _Final =
+			    CONCATENATEX(
+			        ADDCOLUMNS(
+			            GENERATESERIES(1, _Len),
+			            "Char", MID(_Text, _Len - [Value] + 1, 1)
+			        ),
+			        [Char],
+			        "",
+			        [Value],
+			        DESC
+			    )
+			
+			-- PROSTE I PEWNE: wstaw spacje ręcznie
+			VAR _Clean =
+			    VAR t = _Text
+			    VAR l = LEN(t)
+			    RETURN
+			        SWITCH(
+			            TRUE(),
+			            l <= 3, t,
+			            l <= 6, LEFT(t, l-3) & " " & RIGHT(t,3),
+			            l <= 9, LEFT(t, l-6) & " " & MID(t, l-5, 3) & " " & RIGHT(t,3),
+			            LEFT(t, l-9) & " " & MID(t, l-8, 3) & " " & MID(t, l-5, 3) & " " & RIGHT(t,3)
+			        )
+			
+			VAR _SVG =
+			"
+			<svg xmlns='http://www.w3.org/2000/svg' width='180' height='50' viewBox='0 0 180 50'>
+			    <rect x='1' y='1' width='178' height='48' rx='12' ry='12'
+			        fill='" & _BgColor & "' stroke='" & _Color & "' stroke-width='2'/>
+			
+			    <text x='90' y='32'
+			        font-family='Segoe UI'
+			        font-size='20'
+			        font-weight='600'
+			        fill='" & _Color & "'
+			        text-anchor='middle'>
+			        " & _Arrow & " " & _Clean & " YoY" & "
+			    </text>
+			</svg>
+			"
+			
+			RETURN
+			    "data:image/svg+xml;utf8," & _SVG
+		lineageTag: 96f2ecc7-6fee-4620-aff5-fa1e8c97e5c5
+
+	measure 'DIFF NR ''24 vs''25' = ```
+			
+			
+			VAR NetRev24 = 
+			    CALCULATE(
+			        [SUM NetRevenue MGDAX],
+			        'Date'[Year] = 2024)
+			
+			VAR NetRev25 = 
+			    CALCULATE(
+			        [SUM NetRevenue MGDAX],
+			        'Date'[Year] = 2025)
+			
+			RETURN
+			    NetRev25 - NetRev24
+			```
+		lineageTag: 83aeb297-181c-4c38-b323-2c57f379105c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Label More informations' = ```
+			
+			    "..."
+			```
+		lineageTag: 0567fce1-1fd8-4472-8653-867f801137ed
+
+	measure 'DIVIDE AOV' = ```
+			
+			    DIVIDE(
+			        [SUM NetRevenue MGDAX],
+			        [SUM Quantity MGDAX],
+			        0)
+			```
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		lineageTag: d8afab90-9ea6-4168-9369-10b432fbdcd2
+
+	measure 'DIVIDE NetRevenue DBD' =
+			
+			
+			VAR _Current =
+			    [SUM NetRevenue MGDAX]
+			
+			VAR _Previous_Month =
+			    CALCULATE(
+			        [SUM NetRevenue MGDAX],
+			        DATEADD('Date'[Date], -1, MONTH)
+			    )
+			
+			VAR _Previous_Year =
+			    CALCULATE(
+			        [SUM NetRevenue MGDAX],
+			        DATEADD('Date'[Date], -1, YEAR)
+			    )
+			
+			-- wykrycie poziomu
+			VAR _IsMonth =
+			    NOT ISBLANK(SELECTEDVALUE('Date'[MonthName]))
+			
+			VAR _IsYear =
+			    NOT ISBLANK(SELECTEDVALUE('Date'[Year]))
+			
+			VAR _Previous =
+			    SWITCH(
+			        TRUE(),
+			        _IsMonth, _Previous_Month,
+			        _IsYear, _Previous_Year,
+			        BLANK()
+			    )
+			
+			RETURN
+			    DIVIDE(_Current - _Previous, _Previous)
+		formatString: 0%;-0%;0%
+		lineageTag: 39b1a8b7-4f23-43b4-8ed2-ac8b7a5ebdc1
+
+	measure 'DIVIDE NR ''24 vs''25' = ```
+			
+			
+			VAR NetRev24 = 
+			    CALCULATE(
+			        [SUM NetRevenue MGDAX],
+			        'Date'[Year] = 2024)
+			
+			VAR NetRev25 = 
+			    CALCULATE(
+			        [SUM NetRevenue MGDAX],
+			        'Date'[Year] = 2025)
+			
+			RETURN
+			    DIVIDE(
+			        NetRev25 - NetRev24,
+			        NetRev24,
+			        0)
+			```
+		lineageTag: af1eab40-4c3b-4a41-ab31-26e473a5f098
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'DIFF GP ''24 vs''25' = ```
+			
+			
+			VAR Profit24 = 
+			    CALCULATE(
+			        [SUM Profit MGDAX],
+			        'Date'[Year] = 2024)
+			
+			VAR Profit25 = 
+			    CALCULATE(
+			        [SUM Profit MGDAX],
+			        'Date'[Year] = 2025)
+			
+			RETURN
+			    Profit25 - Profit24
+			```
+		lineageTag: 4cfc755a-273c-4211-94c9-0950d786ba69
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'DIVIDE GP ''24 vs''25' = ```
+			
+			
+			VAR Profit24 = 
+			    CALCULATE(
+			        [SUM Profit MGDAX],
+			        'Date'[Year] = 2024)
+			
+			VAR Profit25 = 
+			    CALCULATE(
+			        [SUM Profit MGDAX],
+			        'Date'[Year] = 2025)
+			
+			RETURN
+			    DIVIDE(
+			         Profit25- Profit24,
+			         Profit24,
+			         0)
+			```
+		lineageTag: f0d742c3-0b38-45aa-a622-ac5cc3921398
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'SVG KPI Profit Absolute' =
+			
+			VAR _Value = [DIFF GP '24 vs'25]
+			
+			VAR _Color =
+			    IF(_Value >= 0, "#2E7D32", "#E91E63")
+			
+			VAR _BgColor =
+			    IF(_Value >= 0, "#E8F5E9", "#FCE4EC")
+			
+			VAR _Arrow =
+			    IF(_Value >= 0, "▲", "▼")
+			
+			VAR _Num =
+			    INT(ABS(_Value))
+			
+			VAR _Text =
+			    FORMAT(_Num, "0")
+			
+			-- ręczne dodanie separatora tysięcy (spacja)
+			VAR _Len = LEN(_Text)
+			
+			VAR _Grouped =
+			    CONCATENATEX(
+			        GENERATESERIES(1, _Len),
+			        MID(_Text, _Len - [Value] + 1, 1),
+			        "",
+			        [Value],
+			        DESC
+			    )
+			
+			VAR _Chunks =
+			    CONCATENATEX(
+			        GENERATESERIES(1, _Len),
+			        MID(_Text, _Len - [Value] + 1, 1),
+			        "",
+			        [Value],
+			        DESC
+			    )
+			
+			-- właściwe grupowanie
+			VAR _Final =
+			    CONCATENATEX(
+			        ADDCOLUMNS(
+			            GENERATESERIES(1, _Len),
+			            "Char", MID(_Text, _Len - [Value] + 1, 1)
+			        ),
+			        [Char],
+			        "",
+			        [Value],
+			        DESC
+			    )
+			
+			-- PROSTE I PEWNE: wstaw spacje ręcznie
+			VAR _Clean =
+			    VAR t = _Text
+			    VAR l = LEN(t)
+			    RETURN
+			        SWITCH(
+			            TRUE(),
+			            l <= 3, t,
+			            l <= 6, LEFT(t, l-3) & " " & RIGHT(t,3),
+			            l <= 9, LEFT(t, l-6) & " " & MID(t, l-5, 3) & " " & RIGHT(t,3),
+			            LEFT(t, l-9) & " " & MID(t, l-8, 3) & " " & MID(t, l-5, 3) & " " & RIGHT(t,3)
+			        )
+			
+			VAR _SVG =
+			"
+			<svg xmlns='http://www.w3.org/2000/svg' width='180' height='50' viewBox='0 0 180 50'>
+			    <rect x='1' y='1' width='178' height='48' rx='12' ry='12'
+			        fill='" & _BgColor & "' stroke='" & _Color & "' stroke-width='2'/>
+			
+			    <text x='90' y='32'
+			        font-family='Segoe UI'
+			        font-size='20'
+			        font-weight='600'
+			        fill='" & _Color & "'
+			        text-anchor='middle'>
+			        " & _Arrow & " " & _Clean & " YoY" & "
+			    </text>
+			</svg>
+			"
+			
+			RETURN
+			    "data:image/svg+xml;utf8," & _SVG
+		lineageTag: 5ee75963-0dc8-4caa-9582-34e820c3ac78
+
+	measure 'SVG KPI Profit %' =
+			
+			VAR _Value = [DIVIDE GP '24 vs'25]
+			
+			VAR _Color =
+			    IF(
+			        _Value >= 0,
+			        "#2E7D32",      -- zielony
+			        "#E91E63"       -- różowy
+			    )
+			
+			VAR _FillColor =
+			    IF(
+			        _Value >= 0,
+			        "#E8F5E9",      -- jasnozielone tło
+			        "#FCE4EC"       -- jasnoróżowe tło
+			    )
+			
+			VAR _Arrow =
+			    IF(
+			        _Value >= 0,
+			        "▲",
+			        "▼"
+			    )
+			
+			VAR _Text =
+			    FORMAT(_Value, "+0%;-0%;0%")
+			
+			VAR _SVG =
+			"
+			<svg xmlns='http://www.w3.org/2000/svg' width='180' height='50' viewBox='0 0 180 50'>
+			    <rect
+			        x='1'
+			        y='1'
+			        width='178'
+			        height='48'
+			        rx='12'
+			        ry='12'
+			        fill='" & _FillColor & "'
+			        stroke='" & _Color & "'
+			        stroke-width='2'/>
+			
+			    <text
+			        x='90'
+			        y='32'
+			        font-family='Segoe UI'
+			        font-size='20'
+			        font-weight='600'
+			        fill='" & _Color & "'
+			        text-anchor='middle'>
+			        " & _Arrow & " " & _Text & " YoY" &"
+			    </text>
+			</svg>
+			"
+			
+			RETURN
+			"data:image/svg+xml;utf8," & _SVG
+		lineageTag: 735ecbae-c551-4d9c-91bf-374efdf16dd4
+
+	measure 'DIFF QTY ''24 vs''25' = ```
+			
+			
+			VAR Qty24 = 
+			    CALCULATE(
+			        [SUM Quantity MGDAX],
+			        'Date'[Year] = 2024)
+			
+			VAR Qty25 = 
+			    CALCULATE(
+			        [SUM Quantity MGDAX],
+			        'Date'[Year] = 2025)
+			
+			RETURN
+			    Qty25 - Qty24
+			```
+		formatString: 0
+		lineageTag: 176bad91-6101-40fb-8b85-ca234f207cf4
+
+	measure 'SVG KPI Qty Absolute' =
+			
+			VAR _Value = [DIFF QTY '24 vs'25]
+			
+			VAR _Color =
+			    IF(_Value >= 0, "#2E7D32", "#E91E63")
+			
+			VAR _BgColor =
+			    IF(_Value >= 0, "#E8F5E9", "#FCE4EC")
+			
+			VAR _Arrow =
+			    IF(_Value >= 0, "▲", "▼")
+			
+			VAR _Num =
+			    INT(ABS(_Value))
+			
+			VAR _Text =
+			    FORMAT(_Num, "0")
+			
+			-- ręczne dodanie separatora tysięcy (spacja)
+			VAR _Len = LEN(_Text)
+			
+			VAR _Grouped =
+			    CONCATENATEX(
+			        GENERATESERIES(1, _Len),
+			        MID(_Text, _Len - [Value] + 1, 1),
+			        "",
+			        [Value],
+			        DESC
+			    )
+			
+			VAR _Chunks =
+			    CONCATENATEX(
+			        GENERATESERIES(1, _Len),
+			        MID(_Text, _Len - [Value] + 1, 1),
+			        "",
+			        [Value],
+			        DESC
+			    )
+			
+			-- właściwe grupowanie
+			VAR _Final =
+			    CONCATENATEX(
+			        ADDCOLUMNS(
+			            GENERATESERIES(1, _Len),
+			            "Char", MID(_Text, _Len - [Value] + 1, 1)
+			        ),
+			        [Char],
+			        "",
+			        [Value],
+			        DESC
+			    )
+			
+			-- PROSTE I PEWNE: wstaw spacje ręcznie
+			VAR _Clean =
+			    VAR t = _Text
+			    VAR l = LEN(t)
+			    RETURN
+			        SWITCH(
+			            TRUE(),
+			            l <= 3, t,
+			            l <= 6, LEFT(t, l-3) & " " & RIGHT(t,3),
+			            l <= 9, LEFT(t, l-6) & " " & MID(t, l-5, 3) & " " & RIGHT(t,3),
+			            LEFT(t, l-9) & " " & MID(t, l-8, 3) & " " & MID(t, l-5, 3) & " " & RIGHT(t,3)
+			        )
+			
+			VAR _SVG =
+			"
+			<svg xmlns='http://www.w3.org/2000/svg' width='180' height='50' viewBox='0 0 180 50'>
+			    <rect x='1' y='1' width='178' height='48' rx='12' ry='12'
+			        fill='" & _BgColor & "' stroke='" & _Color & "' stroke-width='2'/>
+			
+			    <text x='90' y='32'
+			        font-family='Segoe UI'
+			        font-size='20'
+			        font-weight='600'
+			        fill='" & _Color & "'
+			        text-anchor='middle'>
+			        " & _Arrow & " " & _Clean & " YoY" & "
+			    </text>
+			</svg>
+			"
+			
+			RETURN
+			    "data:image/svg+xml;utf8," & _SVG
+		lineageTag: c9aa87c3-f82e-46b4-9d14-1a1d883d8ed6
+
+	measure 'DIFF AOV ''24 vs''25' = ```
+			
+			
+			VAR AOV24 = 
+			    CALCULATE(
+			        [DIVIDE AOV],
+			        'Date'[Year] = 2024)
+			
+			VAR AOV25 = 
+			    CALCULATE(
+			        [DIVIDE AOV],
+			        'Date'[Year] = 2025)
+			
+			RETURN
+			    AOV25 - AOV24
+			```
+		formatString: #,0.00
+		lineageTag: ada68ec1-adbb-4974-b754-ef5e9855dccf
+
+	measure 'SVG KPI AOV Absolute' =
+			
+			VAR _Value = [DIFF AOV '24 vs'25]
+			
+			VAR _Color =
+			    IF(_Value >= 0, "#2E7D32", "#E91E63")
+			
+			VAR _BgColor =
+			    IF(_Value >= 0, "#E8F5E9", "#FCE4EC")
+			
+			VAR _Arrow =
+			    IF(_Value >= 0, "▲", "▼")
+			
+			VAR _Text =
+			    FORMAT(ABS(_Value), "#,##0.00")
+			
+			VAR _SVG =
+			"
+			<svg xmlns='http://www.w3.org/2000/svg' width='180' height='50' viewBox='0 0 180 50'>
+			    <rect x='1' y='1' width='178' height='48' rx='12' ry='12'
+			        fill='" & _BgColor & "' stroke='" & _Color & "' stroke-width='2'/>
+			
+			    <text x='90' y='32'
+			        font-family='Segoe UI'
+			        font-size='20'
+			        font-weight='600'
+			        fill='" & _Color & "'
+			        text-anchor='middle'>
+			        " & _Arrow & " " & _Text & " YoY
+			    </text>
+			</svg>
+			"
+			
+			RETURN
+			    "data:image/svg+xml;utf8," & _SVG
+		lineageTag: 83256e62-858f-4d55-a680-b746ce1a0705
+
+	measure 'SUM Sessions' = ```
+			
+			    SUM(Traffic[Sessions])
+			```
+		formatString: #,0
+		lineageTag: ee372233-e514-404c-aa75-01ae15079ed6
+
+	measure 'DIFF Sessions ''24 vs''25' = ```
+			
+			
+			VAR Sessions24 = 
+			    CALCULATE(
+			        [SUM Sessions],
+			        'Date'[Year] = 2024)
+			
+			VAR Sessions25 = 
+			    CALCULATE(
+			        [SUM Sessions],
+			        'Date'[Year] = 2025)
+			
+			RETURN
+			    Sessions25 - Sessions24
+			```
+		formatString: 0
+		lineageTag: 96d414c1-f374-4ed9-a50a-653f44533dd7
+
+	measure 'SVG KPI Sessions Absolute' =
+			
+			VAR _Value = [DIFF Sessions '24 vs'25]
+			
+			VAR _Color =
+			    IF(_Value >= 0, "#2E7D32", "#E91E63")
+			
+			VAR _BgColor =
+			    IF(_Value >= 0, "#E8F5E9", "#FCE4EC")
+			
+			VAR _Arrow =
+			    IF(_Value >= 0, "▲", "▼")
+			
+			VAR _Num =
+			    INT(ABS(_Value))
+			
+			VAR _Text =
+			    FORMAT(_Num, "0")
+			
+			-- ręczne dodanie separatora tysięcy (spacja)
+			VAR _Len = LEN(_Text)
+			
+			VAR _Grouped =
+			    CONCATENATEX(
+			        GENERATESERIES(1, _Len),
+			        MID(_Text, _Len - [Value] + 1, 1),
+			        "",
+			        [Value],
+			        DESC
+			    )
+			
+			VAR _Chunks =
+			    CONCATENATEX(
+			        GENERATESERIES(1, _Len),
+			        MID(_Text, _Len - [Value] + 1, 1),
+			        "",
+			        [Value],
+			        DESC
+			    )
+			
+			-- właściwe grupowanie
+			VAR _Final =
+			    CONCATENATEX(
+			        ADDCOLUMNS(
+			            GENERATESERIES(1, _Len),
+			            "Char", MID(_Text, _Len - [Value] + 1, 1)
+			        ),
+			        [Char],
+			        "",
+			        [Value],
+			        DESC
+			    )
+			
+			-- PROSTE I PEWNE: wstaw spacje ręcznie
+			VAR _Clean =
+			    VAR t = _Text
+			    VAR l = LEN(t)
+			    RETURN
+			        SWITCH(
+			            TRUE(),
+			            l <= 3, t,
+			            l <= 6, LEFT(t, l-3) & " " & RIGHT(t,3),
+			            l <= 9, LEFT(t, l-6) & " " & MID(t, l-5, 3) & " " & RIGHT(t,3),
+			            LEFT(t, l-9) & " " & MID(t, l-8, 3) & " " & MID(t, l-5, 3) & " " & RIGHT(t,3)
+			        )
+			
+			VAR _SVG =
+			"
+			<svg xmlns='http://www.w3.org/2000/svg' width='180' height='50' viewBox='0 0 180 50'>
+			    <rect x='1' y='1' width='178' height='48' rx='12' ry='12'
+			        fill='" & _BgColor & "' stroke='" & _Color & "' stroke-width='2'/>
+			
+			    <text x='90' y='32'
+			        font-family='Segoe UI'
+			        font-size='20'
+			        font-weight='600'
+			        fill='" & _Color & "'
+			        text-anchor='middle'>
+			        " & _Arrow & " " & _Clean & " YoY" & "
+			    </text>
+			</svg>
+			"
+			
+			RETURN
+			    "data:image/svg+xml;utf8," & _SVG
+		lineageTag: 54081564-be4a-46db-9f6e-4e8601035f26
+
+	measure 'DIVIDE Qty ''24 vs''25' = ```
+			
+			
+			VAR Qty24 = 
+			    CALCULATE(
+			        [SUM Quantity MGDAX],
+			        'Date'[Year] = 2024)
+			
+			VAR Qty25 = 
+			    CALCULATE(
+			        [SUM Quantity MGDAX],
+			        'Date'[Year] = 2025)
+			
+			RETURN
+			    DIVIDE(
+			         Qty25- Qty24,
+			         Qty24,
+			         0)
+			```
+		lineageTag: c9f5764f-5d14-45cc-bd31-ffcf9ff82e0f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'SVG KPI Qty %' =
+			
+			VAR _Value = [DIVIDE Qty '24 vs'25]
+			
+			VAR _Color =
+			    IF(
+			        _Value >= 0,
+			        "#2E7D32",      -- zielony
+			        "#E91E63"       -- różowy
+			    )
+			
+			VAR _FillColor =
+			    IF(
+			        _Value >= 0,
+			        "#E8F5E9",      -- jasnozielone tło
+			        "#FCE4EC"       -- jasnoróżowe tło
+			    )
+			
+			VAR _Arrow =
+			    IF(
+			        _Value >= 0,
+			        "▲",
+			        "▼"
+			    )
+			
+			VAR _Text =
+			    FORMAT(_Value, "+0%;-0%;0%")
+			
+			VAR _SVG =
+			"
+			<svg xmlns='http://www.w3.org/2000/svg' width='180' height='50' viewBox='0 0 180 50'>
+			    <rect
+			        x='1'
+			        y='1'
+			        width='178'
+			        height='48'
+			        rx='12'
+			        ry='12'
+			        fill='" & _FillColor & "'
+			        stroke='" & _Color & "'
+			        stroke-width='2'/>
+			
+			    <text
+			        x='90'
+			        y='32'
+			        font-family='Segoe UI'
+			        font-size='20'
+			        font-weight='600'
+			        fill='" & _Color & "'
+			        text-anchor='middle'>
+			        " & _Arrow & " " & _Text & " YoY" &"
+			    </text>
+			</svg>
+			"
+			
+			RETURN
+			"data:image/svg+xml;utf8," & _SVG
+		lineageTag: 9d3f6e22-0c7a-45d7-b216-e59338352eda
+
+	column 'Kolumna 1'
+		dataType: int64
+		formatString: 0
+		lineageTag: b4ba6bdc-af42-4e59-8d94-ba9c0f44ef38
+		summarizeBy: sum
+		sourceColumn: Kolumna 1
+
+		annotation SummarizationSetBy = Automatic
+
+	partition !Measures = m
+		mode: import
+		source =
+				let
+				    Źródło = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlSKjQUA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Kolumna 1" = _t]),
+				    #"Zmieniono typ" = Table.TransformColumnTypes(Źródło,{{"Kolumna 1", Int64.Type}})
+				in
+				    #"Zmieniono typ"
+
+	annotation PBI_ResultType = Table
+

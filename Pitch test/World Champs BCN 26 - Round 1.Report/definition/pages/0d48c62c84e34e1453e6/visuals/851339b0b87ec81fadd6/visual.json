@@ -1,0 +1,2219 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "851339b0b87ec81fadd6",
+  "position": {
+    "x": 1135,
+    "y": 383,
+    "z": 22000,
+    "height": 581,
+    "width": 687,
+    "tabOrder": 20000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Summary ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "14pt",
+                      "color": "#000000"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Channels",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Our channels: ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "Web",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#c82e70"
+                    }
+                  },
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "1.332m€",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": " (",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "+58k€",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": " vs PY), ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "Mobile App",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#c82e70"
+                    }
+                  },
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "1.265m€ ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "(",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "+83k€",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "). It is worth to note that ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "Organic Search",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#c82e70"
+                    }
+                  },
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "582k€ ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "(",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "+50k€ ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "vs PY) and",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": " Direct",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#c82e70"
+                    }
+                  },
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "499k€ ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "(",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "+7k€",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": " vs PY) account for ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "42%",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": " of net revenue in ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "2025",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": ". We should review the strategy for th",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "e",
+                    "textStyle": {
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "Influencer ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "(lowest value). ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Loyalty members",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "We have better growth in non-loyalty memebers. ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "Casual Fan",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#c82e70"
+                    }
+                  },
+                  {
+                    "value": " is our best segment ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "1.447m€ ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "(",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "+76k€ ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "vs PY) while ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "Collector",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#c82e70"
+                    }
+                  },
+                  {
+                    "value": " is the weakest segment ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "30k€ ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "(",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "+21k€ ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "vs PY).",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Customers",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#666666"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Most of our customers belong to the ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "Casual Fan",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#c82e70"
+                    }
+                  },
+                  {
+                    "value": " 1.447m€ ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "(",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "+76k€ ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "vs PY), while we should consider how to improve ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "Collector",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#c82e70"
+                    }
+                  },
+                  {
+                    "value": " segment ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "308k€",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": " (",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "+21k€ ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "vs PY). Maybe some good promotions will increase performance.",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Regions",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "EMEA",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#c82e70"
+                    }
+                  },
+                  {
+                    "value": " is very important because it delivers the highest revenue and the strongest growth. On the other hand we should investigate how t",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "\t"
+                  },
+                  {
+                    "value": "o improve values for ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "APAC",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#c82e70"
+                    }
+                  },
+                  {
+                    "value": " (lower performance).",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Traffic",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "The current number of ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "sessions",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#c82e70"
+                    }
+                  },
+                  {
+                    "value": " is ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "2.020m",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": " (",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "+98k",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": " vs PY). The current conversion rate is ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "3.23%",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": " (",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "-0.02%",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": " vs PY). Our bounce rate is lower than last year. In a nutshell conversion rates in our ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "industry",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " is ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "1.7%-3.0%",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": ". That means our current values are at a good level. Of course to grow more we should think about some sales and marketing actions.",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#000000"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "p",
+                                "Entity": "Product",
+                                "Type": 0
+                              },
+                              {
+                                "Name": "v",
+                                "Entity": "!Measures",
+                                "Type": 0
+                              },
+                              {
+                                "Name": "subquery",
+                                "Expression": {
+                                  "Subquery": {
+                                    "Query": {
+                                      "Version": 2,
+                                      "From": [
+                                        {
+                                          "Name": "sp",
+                                          "Entity": "Product",
+                                          "Type": 0
+                                        },
+                                        {
+                                          "Name": "ss",
+                                          "Entity": "Sales",
+                                          "Type": 0
+                                        },
+                                        {
+                                          "Name": "sv",
+                                          "Entity": "!Measures",
+                                          "Type": 0
+                                        }
+                                      ],
+                                      "Select": [
+                                        {
+                                          "Column": {
+                                            "Expression": {
+                                              "SourceRef": {
+                                                "Source": "sp"
+                                              }
+                                            },
+                                            "Property": "Subcategory"
+                                          },
+                                          "Name": "sp_Subcategory"
+                                        }
+                                      ],
+                                      "Where": [
+                                        {
+                                          "Condition": {
+                                            "Exists": {
+                                              "Expression": {
+                                                "SourceRef": {
+                                                  "Source": "ss"
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "Target": [
+                                            {
+                                              "SourceRef": {
+                                                "Source": "sp"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "OrderBy": [
+                                        {
+                                          "Direction": 2,
+                                          "Expression": {
+                                            "Measure": {
+                                              "Expression": {
+                                                "SourceRef": {
+                                                  "Source": "sv"
+                                                }
+                                              },
+                                              "Property": "SUM NetRevenue MGDAX"
+                                            }
+                                          }
+                                        }
+                                      ],
+                                      "Top": 1
+                                    }
+                                  }
+                                },
+                                "Type": 2
+                              },
+                              {
+                                "Name": "s",
+                                "Entity": "Sales",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "Subcategory"
+                                },
+                                "Name": "Product.Subcategory"
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "p"
+                                            }
+                                          },
+                                          "Property": "Subcategory"
+                                        }
+                                      }
+                                    ],
+                                    "Table": {
+                                      "SourceRef": {
+                                        "Source": "subquery"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "Condition": {
+                                  "Exists": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "s"
+                                      }
+                                    }
+                                  }
+                                },
+                                "Target": [
+                                  {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            "OrderBy": [
+                              {
+                                "Direction": 2,
+                                "Expression": {
+                                  "Measure": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "v"
+                                      }
+                                    },
+                                    "Property": "SUM NetRevenue MGDAX"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "Product.Subcategory"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "BestSubCategory",
+                      "utterance": "Subcategory with highest SUM NetRevenue MGDAX"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "BestSubCategory"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "p",
+                                "Entity": "Product",
+                                "Type": 0
+                              },
+                              {
+                                "Name": "v",
+                                "Entity": "!Measures",
+                                "Type": 0
+                              },
+                              {
+                                "Name": "subquery",
+                                "Expression": {
+                                  "Subquery": {
+                                    "Query": {
+                                      "Version": 2,
+                                      "From": [
+                                        {
+                                          "Name": "ss",
+                                          "Entity": "Sales",
+                                          "Type": 0
+                                        },
+                                        {
+                                          "Name": "sp",
+                                          "Entity": "Product",
+                                          "Type": 0
+                                        },
+                                        {
+                                          "Name": "sv",
+                                          "Entity": "!Measures",
+                                          "Type": 0
+                                        },
+                                        {
+                                          "Name": "sd",
+                                          "Entity": "Date",
+                                          "Type": 0
+                                        }
+                                      ],
+                                      "Select": [
+                                        {
+                                          "Column": {
+                                            "Expression": {
+                                              "SourceRef": {
+                                                "Source": "sp"
+                                              }
+                                            },
+                                            "Property": "ReleaseSeason"
+                                          },
+                                          "Name": "sp_ReleaseSeason"
+                                        }
+                                      ],
+                                      "Where": [
+                                        {
+                                          "Condition": {
+                                            "Exists": {
+                                              "Expression": {
+                                                "SourceRef": {
+                                                  "Source": "ss"
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "Target": [
+                                            {
+                                              "SourceRef": {
+                                                "Source": "sp"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "Condition": {
+                                            "Exists": {
+                                              "Expression": {
+                                                "SourceRef": {
+                                                  "Source": "ss"
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "Target": [
+                                            {
+                                              "SourceRef": {
+                                                "Source": "sd"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "Condition": {
+                                            "Comparison": {
+                                              "ComparisonKind": 0,
+                                              "Left": {
+                                                "Column": {
+                                                  "Expression": {
+                                                    "SourceRef": {
+                                                      "Source": "sd"
+                                                    }
+                                                  },
+                                                  "Property": "Year"
+                                                }
+                                              },
+                                              "Right": {
+                                                "DateSpan": {
+                                                  "Expression": {
+                                                    "Literal": {
+                                                      "Value": "datetime'2025-01-01T00:00:00'"
+                                                    }
+                                                  },
+                                                  "TimeUnit": 3
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      ],
+                                      "OrderBy": [
+                                        {
+                                          "Direction": 2,
+                                          "Expression": {
+                                            "Measure": {
+                                              "Expression": {
+                                                "SourceRef": {
+                                                  "Source": "sv"
+                                                }
+                                              },
+                                              "Property": "SUM NetRevenue MGDAX"
+                                            }
+                                          }
+                                        }
+                                      ],
+                                      "Top": 1
+                                    }
+                                  }
+                                },
+                                "Type": 2
+                              },
+                              {
+                                "Name": "s",
+                                "Entity": "Sales",
+                                "Type": 0
+                              },
+                              {
+                                "Name": "d",
+                                "Entity": "Date",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "ReleaseSeason"
+                                },
+                                "Name": "Product.ReleaseSeason"
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "p"
+                                            }
+                                          },
+                                          "Property": "ReleaseSeason"
+                                        }
+                                      }
+                                    ],
+                                    "Table": {
+                                      "SourceRef": {
+                                        "Source": "subquery"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "Condition": {
+                                  "Exists": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "s"
+                                      }
+                                    }
+                                  }
+                                },
+                                "Target": [
+                                  {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "Condition": {
+                                  "Exists": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "s"
+                                      }
+                                    }
+                                  }
+                                },
+                                "Target": [
+                                  {
+                                    "SourceRef": {
+                                      "Source": "d"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "Condition": {
+                                  "Comparison": {
+                                    "ComparisonKind": 0,
+                                    "Left": {
+                                      "Column": {
+                                        "Expression": {
+                                          "SourceRef": {
+                                            "Source": "d"
+                                          }
+                                        },
+                                        "Property": "Year"
+                                      }
+                                    },
+                                    "Right": {
+                                      "DateSpan": {
+                                        "Expression": {
+                                          "Literal": {
+                                            "Value": "datetime'2025-01-01T00:00:00'"
+                                          }
+                                        },
+                                        "TimeUnit": 3
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ],
+                            "OrderBy": [
+                              {
+                                "Direction": 2,
+                                "Expression": {
+                                  "Measure": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "v"
+                                      }
+                                    },
+                                    "Property": "SUM NetRevenue MGDAX"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "Product.ReleaseSeason"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "BestReleaseSeason",
+                      "utterance": "ReleaseSeason with highest SUM NetRevenue MGDAX in 2025 (year)"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "BestReleaseSeason"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "p",
+                                "Entity": "Product",
+                                "Type": 0
+                              },
+                              {
+                                "Name": "v",
+                                "Entity": "!Measures",
+                                "Type": 0
+                              },
+                              {
+                                "Name": "subquery",
+                                "Expression": {
+                                  "Subquery": {
+                                    "Query": {
+                                      "Version": 2,
+                                      "From": [
+                                        {
+                                          "Name": "sp",
+                                          "Entity": "Product",
+                                          "Type": 0
+                                        },
+                                        {
+                                          "Name": "ss",
+                                          "Entity": "Sales",
+                                          "Type": 0
+                                        },
+                                        {
+                                          "Name": "sv",
+                                          "Entity": "!Measures",
+                                          "Type": 0
+                                        }
+                                      ],
+                                      "Select": [
+                                        {
+                                          "Column": {
+                                            "Expression": {
+                                              "SourceRef": {
+                                                "Source": "sp"
+                                              }
+                                            },
+                                            "Property": "Subcategory"
+                                          },
+                                          "Name": "sp_Subcategory"
+                                        }
+                                      ],
+                                      "Where": [
+                                        {
+                                          "Condition": {
+                                            "Exists": {
+                                              "Expression": {
+                                                "SourceRef": {
+                                                  "Source": "ss"
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "Target": [
+                                            {
+                                              "SourceRef": {
+                                                "Source": "sp"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "OrderBy": [
+                                        {
+                                          "Direction": 1,
+                                          "Expression": {
+                                            "Measure": {
+                                              "Expression": {
+                                                "SourceRef": {
+                                                  "Source": "sv"
+                                                }
+                                              },
+                                              "Property": "DIFF NR '24 vs'25"
+                                            }
+                                          }
+                                        }
+                                      ],
+                                      "Top": 1
+                                    }
+                                  }
+                                },
+                                "Type": 2
+                              },
+                              {
+                                "Name": "s",
+                                "Entity": "Sales",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "Subcategory"
+                                },
+                                "Name": "Product.Subcategory"
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "p"
+                                            }
+                                          },
+                                          "Property": "Subcategory"
+                                        }
+                                      }
+                                    ],
+                                    "Table": {
+                                      "SourceRef": {
+                                        "Source": "subquery"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "Condition": {
+                                  "Exists": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "s"
+                                      }
+                                    }
+                                  }
+                                },
+                                "Target": [
+                                  {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            "OrderBy": [
+                              {
+                                "Direction": 1,
+                                "Expression": {
+                                  "Measure": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "v"
+                                      }
+                                    },
+                                    "Property": "DIFF NR '24 vs'25"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "Product.Subcategory"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "LowestSubCategory",
+                      "utterance": "Subcategory with lowest DIFF NR '24 vs'25"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "LowestSubCategory"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "!",
+                                "Entity": "!Measures",
+                                "Type": 0
+                              },
+                              {
+                                "Name": "p",
+                                "Entity": "Product",
+                                "Type": 0
+                              },
+                              {
+                                "Name": "subquery",
+                                "Expression": {
+                                  "Subquery": {
+                                    "Query": {
+                                      "Version": 2,
+                                      "From": [
+                                        {
+                                          "Name": "ss",
+                                          "Entity": "Sales",
+                                          "Type": 0
+                                        },
+                                        {
+                                          "Name": "sp",
+                                          "Entity": "Product",
+                                          "Type": 0
+                                        },
+                                        {
+                                          "Name": "sv",
+                                          "Entity": "!Measures",
+                                          "Type": 0
+                                        }
+                                      ],
+                                      "Select": [
+                                        {
+                                          "Column": {
+                                            "Expression": {
+                                              "SourceRef": {
+                                                "Source": "sp"
+                                              }
+                                            },
+                                            "Property": "Subcategory"
+                                          },
+                                          "Name": "sp_Subcategory"
+                                        }
+                                      ],
+                                      "Where": [
+                                        {
+                                          "Condition": {
+                                            "Exists": {
+                                              "Expression": {
+                                                "SourceRef": {
+                                                  "Source": "ss"
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "Target": [
+                                            {
+                                              "SourceRef": {
+                                                "Source": "sp"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "OrderBy": [
+                                        {
+                                          "Direction": 1,
+                                          "Expression": {
+                                            "Measure": {
+                                              "Expression": {
+                                                "SourceRef": {
+                                                  "Source": "sv"
+                                                }
+                                              },
+                                              "Property": "DIFF NR '24 vs'25"
+                                            }
+                                          }
+                                        }
+                                      ],
+                                      "Top": 1
+                                    }
+                                  }
+                                },
+                                "Type": 2
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "!"
+                                    }
+                                  },
+                                  "Property": "DIFF NR '24 vs'25"
+                                },
+                                "Name": "!Measures.DIFF NR '24 vs'25"
+                              },
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "Subcategory"
+                                },
+                                "Name": "Product.Subcategory"
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "p"
+                                            }
+                                          },
+                                          "Property": "Subcategory"
+                                        }
+                                      }
+                                    ],
+                                    "Table": {
+                                      "SourceRef": {
+                                        "Source": "subquery"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ],
+                            "OrderBy": [
+                              {
+                                "Direction": 1,
+                                "Expression": {
+                                  "Measure": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "!"
+                                      }
+                                    },
+                                    "Property": "DIFF NR '24 vs'25"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "!Measures.DIFF NR '24 vs'25"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "LowestSubCategoryValue",
+                      "utterance": "DIFF NR '24 vs'25 Subcategory with lowest DIFF NR '24 vs'25"
+                    }
+                  }
+                }
+              }
+            },
+            "formatString": {
+              "expr": {
+                "Literal": {
+                  "Value": "'#,0'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "LowestSubCategoryValue"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "!",
+                                "Entity": "!Measures",
+                                "Type": 0
+                              },
+                              {
+                                "Name": "p",
+                                "Entity": "Product",
+                                "Type": 0
+                              },
+                              {
+                                "Name": "subquery",
+                                "Expression": {
+                                  "Subquery": {
+                                    "Query": {
+                                      "Version": 2,
+                                      "From": [
+                                        {
+                                          "Name": "ss",
+                                          "Entity": "Sales",
+                                          "Type": 0
+                                        },
+                                        {
+                                          "Name": "sp",
+                                          "Entity": "Product",
+                                          "Type": 0
+                                        },
+                                        {
+                                          "Name": "sv",
+                                          "Entity": "!Measures",
+                                          "Type": 0
+                                        }
+                                      ],
+                                      "Select": [
+                                        {
+                                          "Column": {
+                                            "Expression": {
+                                              "SourceRef": {
+                                                "Source": "sp"
+                                              }
+                                            },
+                                            "Property": "Subcategory"
+                                          },
+                                          "Name": "sp_Subcategory"
+                                        }
+                                      ],
+                                      "Where": [
+                                        {
+                                          "Condition": {
+                                            "Exists": {
+                                              "Expression": {
+                                                "SourceRef": {
+                                                  "Source": "ss"
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "Target": [
+                                            {
+                                              "SourceRef": {
+                                                "Source": "sp"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "OrderBy": [
+                                        {
+                                          "Direction": 2,
+                                          "Expression": {
+                                            "Measure": {
+                                              "Expression": {
+                                                "SourceRef": {
+                                                  "Source": "sv"
+                                                }
+                                              },
+                                              "Property": "DIFF NR '24 vs'25"
+                                            }
+                                          }
+                                        }
+                                      ],
+                                      "Top": 1
+                                    }
+                                  }
+                                },
+                                "Type": 2
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "!"
+                                    }
+                                  },
+                                  "Property": "DIFF NR '24 vs'25"
+                                },
+                                "Name": "!Measures.DIFF NR '24 vs'25"
+                              },
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "Subcategory"
+                                },
+                                "Name": "Product.Subcategory"
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "p"
+                                            }
+                                          },
+                                          "Property": "Subcategory"
+                                        }
+                                      }
+                                    ],
+                                    "Table": {
+                                      "SourceRef": {
+                                        "Source": "subquery"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ],
+                            "OrderBy": [
+                              {
+                                "Direction": 2,
+                                "Expression": {
+                                  "Measure": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "!"
+                                      }
+                                    },
+                                    "Property": "DIFF NR '24 vs'25"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "!Measures.DIFF NR '24 vs'25"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "BestSubCategoryValue",
+                      "utterance": "DIFF NR '24 vs'25 Subcategory with highest DIFF NR '24 vs'25"
+                    }
+                  }
+                }
+              }
+            },
+            "formatString": {
+              "expr": {
+                "Literal": {
+                  "Value": "'#,0'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "BestSubCategoryValue"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "!",
+                                "Entity": "!Measures",
+                                "Type": 0
+                              },
+                              {
+                                "Name": "p",
+                                "Entity": "Product",
+                                "Type": 0
+                              },
+                              {
+                                "Name": "subquery",
+                                "Expression": {
+                                  "Subquery": {
+                                    "Query": {
+                                      "Version": 2,
+                                      "From": [
+                                        {
+                                          "Name": "ss",
+                                          "Entity": "Sales",
+                                          "Type": 0
+                                        },
+                                        {
+                                          "Name": "sp",
+                                          "Entity": "Product",
+                                          "Type": 0
+                                        },
+                                        {
+                                          "Name": "sv",
+                                          "Entity": "!Measures",
+                                          "Type": 0
+                                        }
+                                      ],
+                                      "Select": [
+                                        {
+                                          "Column": {
+                                            "Expression": {
+                                              "SourceRef": {
+                                                "Source": "sp"
+                                              }
+                                            },
+                                            "Property": "ReleaseSeason"
+                                          },
+                                          "Name": "sp_ReleaseSeason"
+                                        }
+                                      ],
+                                      "Where": [
+                                        {
+                                          "Condition": {
+                                            "Exists": {
+                                              "Expression": {
+                                                "SourceRef": {
+                                                  "Source": "ss"
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "Target": [
+                                            {
+                                              "SourceRef": {
+                                                "Source": "sp"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "OrderBy": [
+                                        {
+                                          "Direction": 2,
+                                          "Expression": {
+                                            "Measure": {
+                                              "Expression": {
+                                                "SourceRef": {
+                                                  "Source": "sv"
+                                                }
+                                              },
+                                              "Property": "DIFF NR '24 vs'25"
+                                            }
+                                          }
+                                        }
+                                      ],
+                                      "Top": 1
+                                    }
+                                  }
+                                },
+                                "Type": 2
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "!"
+                                    }
+                                  },
+                                  "Property": "DIFF NR '24 vs'25"
+                                },
+                                "Name": "!Measures.DIFF NR '24 vs'25"
+                              },
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "ReleaseSeason"
+                                },
+                                "Name": "Product.ReleaseSeason"
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "p"
+                                            }
+                                          },
+                                          "Property": "ReleaseSeason"
+                                        }
+                                      }
+                                    ],
+                                    "Table": {
+                                      "SourceRef": {
+                                        "Source": "subquery"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ],
+                            "OrderBy": [
+                              {
+                                "Direction": 2,
+                                "Expression": {
+                                  "Measure": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "!"
+                                      }
+                                    },
+                                    "Property": "DIFF NR '24 vs'25"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "!Measures.DIFF NR '24 vs'25"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "BestReleaseSeasonValue",
+                      "utterance": "DIFF NR '24 vs'25 ReleaseSeason with highest DIFF NR '24 vs'25"
+                    }
+                  }
+                }
+              }
+            },
+            "formatString": {
+              "expr": {
+                "Literal": {
+                  "Value": "'#,0'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "BestReleaseSeasonValue"
+          }
+        },
+        {
+          "properties": {
+            "expr": {
+              "expr": {
+                "Min": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "Subquery": {
+                          "Query": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "p",
+                                "Entity": "Product",
+                                "Type": 0
+                              },
+                              {
+                                "Name": "s",
+                                "Entity": "Sales",
+                                "Type": 0
+                              },
+                              {
+                                "Name": "d",
+                                "Entity": "Date",
+                                "Type": 0
+                              }
+                            ],
+                            "Select": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "TeamName"
+                                },
+                                "Name": "Product.TeamName"
+                              },
+                              {
+                                "Aggregation": {
+                                  "Expression": {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "s"
+                                        }
+                                      },
+                                      "Property": "NetRevenue"
+                                    }
+                                  },
+                                  "Function": 0
+                                },
+                                "Name": "Sum(Sales.NetRevenue)"
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "Exists": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "s"
+                                      }
+                                    }
+                                  }
+                                },
+                                "Target": [
+                                  {
+                                    "SourceRef": {
+                                      "Source": "d"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "Condition": {
+                                  "Exists": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "s"
+                                      }
+                                    }
+                                  }
+                                },
+                                "Target": [
+                                  {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "Condition": {
+                                  "Comparison": {
+                                    "ComparisonKind": 0,
+                                    "Left": {
+                                      "Column": {
+                                        "Expression": {
+                                          "SourceRef": {
+                                            "Source": "d"
+                                          }
+                                        },
+                                        "Property": "Year"
+                                      }
+                                    },
+                                    "Right": {
+                                      "DateSpan": {
+                                        "Expression": {
+                                          "Literal": {
+                                            "Value": "datetime'2025-01-01T00:00:00'"
+                                          }
+                                        },
+                                        "TimeUnit": 3
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ],
+                            "OrderBy": [
+                              {
+                                "Direction": 2,
+                                "Expression": {
+                                  "Aggregation": {
+                                    "Expression": {
+                                      "Column": {
+                                        "Expression": {
+                                          "SourceRef": {
+                                            "Source": "s"
+                                          }
+                                        },
+                                        "Property": "NetRevenue"
+                                      }
+                                    },
+                                    "Function": 0
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "Property": "Product.TeamName"
+                    }
+                  },
+                  "IncludeAllTypes": 1
+                },
+                "Annotations": {
+                  "NaturalLanguage": {
+                    "version": 1,
+                    "kind": "NaturalLanguage",
+                    "annotation": {
+                      "name": "BestTeamName",
+                      "utterance": "TeamName for second best value NS NetRevenue in 2025 year"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "BestTeamName"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

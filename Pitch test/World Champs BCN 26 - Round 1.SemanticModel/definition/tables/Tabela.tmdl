@@ -1,0 +1,22 @@
+table Tabela
+	lineageTag: 60e110d2-3fc0-4252-8195-93a030620c2e
+
+	column Column
+		formatString: 0
+		lineageTag: 61aba416-c3f1-48d5-9659-b5a4311cab73
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Tabela = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 124a1c0343d24e549f6be98f8216d931
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":null}
+
+	annotation 277cc1b9-af89-4597-8e15-cacc25c0886b = Aby użyć znaków specjalnych w nazwie tabeli obliczeniowej, ujmij całą nazwę w nawiasy kwadratowe ([]) i dodaj znak ] do wszelkich zamykających nawiasów kwadratowych w nazwie.
+
